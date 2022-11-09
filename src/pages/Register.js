@@ -3,13 +3,14 @@ import { useNavigate } from "react-router-dom";
 import authService from "../services/authService";
 import ownerService from "../services/ownerService";
 
-function Login({ setOwner }) {
+function Register({ setOwner }) {
 
     const navigate = useNavigate()
 
     let [form, setForm] = useState({ 
         teamName: '',
-        password: ''
+        password: '',
+        email: ''
     })
 
     const handleChange = (e) => {
@@ -21,25 +22,24 @@ function Login({ setOwner }) {
 
         try {
 
-            const response = await authService.login(form);
-            console.log(response)
+            const response = await authService.register(form)
             localStorage.setItem("token", response.data.token)
 
-            const info = await ownerService.info();
+            const info = await ownerService.info()
     
             setOwner(info.data)
             navigate('/team')
 
         } catch (error) {
-            console.log(error)
             console.log(error.response.data.error)
             alert(error.response.data.error)
         }
+
     }
 
     return ( 
         <>
-            <h1>Login</h1>
+            <h1>Register</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="teamName">Team Name:</label>
                 <br />
@@ -49,6 +49,16 @@ function Login({ setOwner }) {
                     name="teamName"
                     onChange={handleChange}
                     value={form.teamName}
+                />
+                <br /><br />
+                <label htmlFor="email">Email:</label>
+                <br />
+                <input 
+                    type="email" 
+                    id="email"
+                    name="email"
+                    onChange={handleChange}
+                    value={form.email}
                 />
                 <br /><br />
                 <label htmlFor="password">Password:</label>
@@ -67,4 +77,4 @@ function Login({ setOwner }) {
      );
 }
 
-export default Login;
+export default Register;
