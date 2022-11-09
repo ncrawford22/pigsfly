@@ -7,6 +7,7 @@ const mongoConfig = require('./configuration/config');
 
 const authRoutes = require('./routes/authRoutes');
 const ownerRoutes = require('./routes/ownerRoutes');
+const messageRoutes = require('./routes/messageRoutes');
 
 const { authorize } = require('./middleware/authMiddleware');
 
@@ -19,6 +20,7 @@ app.use(express.json());
 
 app.use('/auth', authRoutes);
 app.use('/owners', authorize, ownerRoutes);
+app.use('/smackboard', authorize, messageRoutes)
 
 app.listen(PORT, () => {
     console.log('Listening on port: ' + PORT)

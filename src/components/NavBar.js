@@ -21,6 +21,9 @@ function Navbar({ owner, setOwner }) {
                 <li>
                     <Link to="/team">Team Page</Link>
                 </li>
+                <li>
+                    <Link to="/smackboard">Smack Board</Link>
+                </li>
                 <li onClick={logout}>
                     <Link>Logout</Link>
                 </li>

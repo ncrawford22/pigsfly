@@ -5,7 +5,6 @@ export default function Home() {
         <div>
             <h1>Pigsfly Fantasy Football</h1>
             <GetFantasyData />
-
         </div>
     )
 }

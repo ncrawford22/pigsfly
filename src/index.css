@@ -37,3 +37,9 @@ ul {
     background-color: rgb(26, 91, 121);
     font-weight: bolder;
 }
+
+.delete-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

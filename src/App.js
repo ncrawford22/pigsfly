@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
 import TeamPage from "./pages/TeamPage";
 import Register from "./pages/Register";
+import SmackBoard from "./pages/SmackBoard";
 
 import ownerService from './services/ownerService';
 
@@ -70,6 +71,7 @@ function App() {
                             />
                         } 
                     /> 
+                    <Route path="/smackboard" element={<SmackBoard owner={owner.teamName} />} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             )
