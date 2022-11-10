@@ -71,3 +71,36 @@ ul {
     font-weight: lighter;
     font-size: large;
 }
+
+.logo {
+    filter: drop-shadow(2px 5px 2px lightgray);
+    backface-visibility: visible !important;
+	animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+	from {
+		transform: perspective(1000px) ease-in rotate(0deg);
+	}
+	to {
+		transform: perspective(1000px) rotateY(360deg);
+	}
+}
+
+
+
+
+.getApi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.admin-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}

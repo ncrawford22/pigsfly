@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { confirmAlert } from "react-confirm-alert";
 import ownerService from "../services/ownerService";
 import 'react-confirm-alert/src/react-confirm-alert.css';
+import GetFantasyData from '../components/GetFantasyData';
 
 export default function LeagueAdminCtrls({ owner }) {
 
@@ -52,13 +53,20 @@ export default function LeagueAdminCtrls({ owner }) {
         })
     }
     return (
-        <div>
+        <>
+
             <h1>League Admin Controls</h1>
-            <div>
+            <div className="admin-delete">
                 <h3>Delete All Owners</h3>
-                <br />
+                    <br />
                 <button onClick={handleSubmit}>Delete Owners</button>
             </div>
-        </div>
+            <br />
+            <div className="getApi">
+                <h3>Get API Data</h3>
+                    <br />
+                <GetFantasyData />
+            </div>
+        </>
     )
 }
