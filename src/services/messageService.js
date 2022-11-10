@@ -23,10 +23,15 @@ const createMessage = (newMessage) => {
     return axiosMessages().post('/newmessage', newMessage)
 }
 
+const deleteMessages = (messages) => {
+    return axiosMessages().delete('/clear', messages)
+}
+
 
 const services = {
     index,
-    createMessage
+    createMessage,
+    deleteMessages
 }
 
 export default services

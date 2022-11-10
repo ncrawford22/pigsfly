@@ -1,11 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { confirmAlert } from "react-confirm-alert";
 
 import messageService from '../services/messageService';
 
 export default function SmackBoard( { owner }) {
-
-    console.log(owner)
 
     let messagesRef = useRef();
 
@@ -48,32 +46,55 @@ export default function SmackBoard( { owner }) {
         
     }
 
-    const navigate = useNavigate();
-
     const deleteMessages = async (e) => {
         e.preventDefault();
 
         try {
-
-            const response = await fetch(`http://localhost:8080/smackboard/clear`, {
-                method: "DELETE",
-            })
+            const response = await messageService.deleteMessages(messages)
             console.log(response)
-            navigate('/smackboard')
+            setMessages([])
 
         } catch (error) {
             console.log(error)
         }
     }
 
+    const handleDeleteMessages = () => {
+        confirmAlert({
+            title: 'Confirm Smack Board Deletion',
+            message: 'Are you sure you want to delete this smack talk masterpiece?! You will not be able to recover them...',
+            buttons: [
+                {
+                    label: "No, Cancel now!"
+                },
+                {
+                    label: "Yes, I sure do!",
+                    onClick: () => 
+                        deleteMessages()
+                }
+            ]
+        })
+    }
+    
+    console.log(messages)
     return (
         <div>
             <h1>Smack Board</h1>
 
             <ol style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '20px'}}>
-                {messages.map(m => 
-                        <li key={m._id}>{m.messages}</li>
-                    )}
+                {messages.map(m =>
+                
+                    <div className="smboard-container">
+                        <ul className="smboard-msg" key={m._id}>
+                            <div className="smack-message">
+                                {m.messages}
+                            </div>
+                            <div className="smack-message-owner">
+                                {m.owner}
+                            </div>    
+                        </ul>
+                    </div>
+                )}
             </ol>
 
                 <form onSubmit={handleSubmit}>
@@ -87,7 +108,7 @@ export default function SmackBoard( { owner }) {
                 </form>
                 <br />
                 <div className="delete-btn">
-                {owner === "Let Me See Your TDs" && <button onClick={deleteMessages}>Delete Messages</button>}
+                {owner === "Let Me See Your TDs" && <button onClick={handleDeleteMessages}>Delete Messages</button>}
                 </div>
         </div>
     )

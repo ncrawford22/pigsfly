@@ -43,3 +43,27 @@ ul {
     justify-content: center;
     align-items: center;
 }
+
+.smboard-container {
+    display: flex;
+    justify-content: center;
+}
+.smboard-msg {
+    display: block;
+    padding: 3px;
+    background-color: rgb(26, 91, 121);
+
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-h2 {
+    font-style: italic;
+    font-weight: lighter;
+    font-size: large;
+}

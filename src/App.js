@@ -9,6 +9,7 @@ import Register from "./pages/Register";
 import SmackBoard from "./pages/SmackBoard";
 
 import ownerService from './services/ownerService';
+import LeagueAdminCtrls from "./pages/LeagueAdminCtrls";
 
 let initialRender = true;
 
@@ -62,6 +63,7 @@ function App() {
             routes = (
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/admin" element={<LeagueAdminCtrls owner={owner} />} />
                     <Route 
                         path="/team" 
                         element={

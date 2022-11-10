@@ -19,8 +19,14 @@ const info = () => {
     return axiosOwner().get('/info')
 }
 
+const deleteOwners = (owners) => {
+    return axiosOwner().delete('/clear', owners)
+}
+
+
 const services = {
-    info
+    info,
+    deleteOwners
 }
 
 export default services

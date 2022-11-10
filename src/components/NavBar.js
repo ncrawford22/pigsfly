@@ -8,7 +8,34 @@ function Navbar({ owner, setOwner }) {
     }
 
     if (owner) {
-        return (
+        if (owner === "Let Me See Your TDs") {
+            return (
+                <ul>
+                    <li>
+                        <Link to="/">
+                            <img src="./favicon.ico" alt="React Icon" id="icon"/>
+                        </Link>
+                    </li>
+                    <li>
+                        Welcome {owner}!
+                    </li>
+                    <li>
+                        <Link to="/admin">Admin Controls</Link>
+                    </li>
+                    <li>
+                        <Link to="/team">Team Page</Link>
+                    </li>
+                    <li>
+                        <Link to="/smackboard">Smack Board</Link>
+                    </li>
+                    <li onClick={logout}>
+                        <Link>Logout</Link>
+                    </li>
+                </ul>
+            )
+            
+        } else if (owner !== "Let Me See Your TDs") {
+            return (
             <ul>
                 <li>
                     <Link to="/">
@@ -28,7 +55,9 @@ function Navbar({ owner, setOwner }) {
                     <Link>Logout</Link>
                 </li>
             </ul>
-        )
+            )
+        }
+
     } else {
         return (
             <ul>
