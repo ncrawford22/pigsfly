@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { confirmAlert } from "react-confirm-alert";
+import Card from "react-bootstrap/Card";
+import { Form } from "react-bootstrap";
 
 import messageService from '../services/messageService';
+import { Container, Button } from "react-bootstrap";
 
 export default function SmackBoard( { owner }) {
 
@@ -78,38 +81,43 @@ export default function SmackBoard( { owner }) {
     
     console.log(messages)
     return (
-        <div>
+        <body className="smackboard-main">
             <h1>Smack Board</h1>
-
-            <ol style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '20px'}}>
-                {messages.map(m =>
-                
-                    <div className="smboard-container">
-                        <ul className="smboard-msg" key={m._id}>
-                            <div className="smack-message">
-                                {m.messages}
-                            </div>
-                            <div className="smack-message-owner">
-                                {m.owner}
-                            </div>    
-                        </ul>
-                    </div>
-                )}
-            </ol>
-
-                <form onSubmit={handleSubmit}>
-                    <label htmlFor="messages">Talk Some Smack: </label>
-                    <br />
-                    <input 
-                        type="text" 
-                        ref={messagesRef}
-                    /> <br /><br />
-                    <button type="submit">Smack Talk</button>
-                </form>
+            <Container className="smackboard-container">
+                <Card style={{borderRadius: '45px', boxShadow: '4px 4px 4px 2px grey'}}>
+                    <Card.Body>
+                        <ol style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '20px'}}>
+                            {messages.map(m =>
+                            
+                                <div className="smboard-container">
+                                    <ul className="smboard-msg" key={m._id}>
+                                        <div className="smack-message">
+                                            {m.messages}
+                                        </div>
+                                        <div className="smack-message-owner">
+                                             - {m.owner}
+                                        </div>    
+                                    </ul>
+                                </div>
+                            )}
+                        </ol>
+                    </Card.Body>
+            </Card>
+            </Container>
+            <Container style={{display: 'flex', justifyContent:'center', alignItems: 'center'}}>
+                <Form onSubmit={handleSubmit} style={{display: 'flex', justifyContent: 'center', alightItems: 'center', flexDirection: 'column', width: '500px'}}>
+                        <Form.Label htmlFor="messages" style={{paddingTop: '15px'}}>Talk Some Smack: </Form.Label>
+                        <Form.Control as="textarea" rows={3} 
+                            ref={messagesRef}
+                        /> <br /><br />
+                        <Button variant="primary" type="submit">Smack Talk</Button>
+                </Form>
+            </Container>                
                 <br />
                 <div className="delete-btn">
-                {owner === "Let Me See Your TDs" && <button onClick={handleDeleteMessages}>Delete Messages</button>}
+                {owner === "Let Me See Your TDs" && <Button variant="secondary" onClick={handleDeleteMessages}>Delete Messages</Button>}
                 </div>
-        </div>
+                <br />
+        </body>
     )
 }

@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Navbar from "./components/Navbar";
+import NavBar from "./components/NavBar";
 import TeamPage from "./pages/TeamPage";
 import Register from "./pages/Register";
 import SmackBoard from "./pages/SmackBoard";
@@ -90,8 +91,8 @@ function App() {
     }
 
     return ( 
-        <div className="app">
-            <Navbar owner={owner.teamName} setOwner={setOwner} />
+        <div className="App">
+            <NavBar owner={owner.teamName} setOwner={setOwner} />
             {routes}
         </div>
      );
