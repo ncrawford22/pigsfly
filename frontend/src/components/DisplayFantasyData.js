@@ -1,7 +1,7 @@
 export default function DisplayFantasyData({ team, fantasyDataMain, teamName, email}) {
     return (
         <div className="fantasy-data" style={{marginLeft: '50px'}}>
-            <h1 style={{paddingBottom: '10px'}}>{teamName}</h1>
+            <h1 style={{paddingTop: '10px', paddingBottom: '10px'}}>{teamName}</h1>
             {fantasyDataMain && 
                 <div className="profile-logo" style={{display: 'flex', justifyContent: 'center'}}>
                     <img src={team.logo} alt="profile-logo" style={{width: "100px", height: "100px"}}></img>
@@ -16,7 +16,7 @@ export default function DisplayFantasyData({ team, fantasyDataMain, teamName, em
             <br />
             <div className="roster">
                 <h5 style={{textDecoration: 'underline'}}>Current Roster</h5>
-                {team.roster.entries.map((entry, i) => <div key={i} style={{backgroundColor: 'rgb(17, 17, 17)', width: '100vw', heigh: '100vh'}}>{entry.playerPoolEntry.player.fullName}</div>)}
+                {team.roster.entries.map((entry, i) => <div key={i} style={{backgroundColor: 'rgb(17, 17, 17)', width: '100vw'}}>{entry.playerPoolEntry.player.fullName}</div>)}
             </div>
         </div> 
     )

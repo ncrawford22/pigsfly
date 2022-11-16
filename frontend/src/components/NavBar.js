@@ -35,7 +35,7 @@ function NavBar({ owner, setOwner }) {
                             <img src="./favicon.ico" alt="React Icon" id="icon"/>
                         </Navbar.Brand>
                         <Navbar.Text style={{color: 'white'}}>
-                            Welcome {owner}!
+                            Welcome, {owner}!
                         </Navbar.Text>
                         <Nav.Link href="/team">Team</Nav.Link>
                         <Nav.Link href="/smackboard">Smack Board</Nav.Link>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import DisplayFantasyData from "../components/DisplayFantasyData";
+import EditTeamInfo from "../components/EditTeamInfo";
 
 function TeamPage({ teamName, email }) {
     
@@ -37,6 +38,7 @@ console.log(team)
         <div className="team-page">
             {isLoading && <h1>Loading Fantasy data....</h1>}
             {!isLoading && <DisplayFantasyData team={team} teamName={teamName} isLoading={isLoading} fantasyDataMain={fantasyDataMain} email={email} />}
+            {!isLoading && <EditTeamInfo email={email} isLoading={isLoading} />}
         </div>
         
      );
