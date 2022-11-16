@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pigsfly/static/css/main.b945a2eb.css",
+    "main.js": "/pigsfly/static/js/main.dc3ce24b.js",
+    "index.html": "/pigsfly/index.html",
+    "main.b945a2eb.css.map": "/pigsfly/static/css/main.b945a2eb.css.map",
+    "main.dc3ce24b.js.map": "/pigsfly/static/js/main.dc3ce24b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b945a2eb.css",
+    "static/js/main.dc3ce24b.js"
+  ]
+}
