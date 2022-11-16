@@ -74,7 +74,49 @@ h1 {
     font-style: italic;
     font-weight: lighter;
     font-size: large;
+    /* background-color: whitesmoke; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 8px, 100% 0, calc(100% - 8px) 100%, 8px calc(100% - 8px));
+    line-height: 1.2em;
+    padding: 15px;
+    animation: rotateText 30s linear infinite alternate-reverse;
 }
+@keyframes rotateText {
+    from {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+    to {
+        transform: perspective(1000px) ease-in rotateY(360deg);
+    }
+}
+
+.home-h2-border {
+    border-style: dotted;
+    border-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 2vh;
+    left: -2vw;
+    bottom: 100px;
+    width: fit-content;
+    transform: rotateY(27deg);
+    animation: border-rotate 4s cubic-bezier(.51, -.4, .56, .99);
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+@keyframes border-rotate {
+    40% {
+        transform: rotateY(27deg)
+    }
+    to {
+        transform: rotateY(207deg);
+    }
+}
+
 
 .logo {
     filter: drop-shadow(2px 5px 2px lightgray);
