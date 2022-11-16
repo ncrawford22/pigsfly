@@ -39,7 +39,7 @@ const login = async (req, res) => {
 
     try {
 
-        const foundOwner = await Owner.findOne({ teamName: req.body.teamName })
+        const foundOwner = await Owner.findOne({ email: req.body.email })
 
         if (!foundOwner) {
             return res.status(404).json({ error: 'No such owner exists' })
@@ -51,7 +51,7 @@ const login = async (req, res) => {
             return res.status(403).json({ error: 'Invalid credentials '})
         }
 
-        const payload = { id: foundOwner._id, owner: foundOwner.teamName }
+        const payload = { id: foundOwner._id, owner: foundOwner.email }
         const token = createToken(payload);
 
         res.status(200).json({ token })

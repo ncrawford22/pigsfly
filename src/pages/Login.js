@@ -8,7 +8,7 @@ function Login({ setOwner }) {
     const navigate = useNavigate()
 
     let [form, setForm] = useState({ 
-        teamName: '',
+        email: '',
         password: ''
     })
 
@@ -41,14 +41,14 @@ function Login({ setOwner }) {
         <>
             <h1>Login</h1>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="teamName">Team Name:</label>
+                <label htmlFor="email">Email:</label>
                 <br />
                 <input 
                     type="text" 
-                    id="teamName"
-                    name="teamName"
+                    id="email"
+                    name="email"
                     onChange={handleChange}
-                    value={form.teamName}
+                    value={form.email}
                 />
                 <br /><br />
                 <label htmlFor="password">Password:</label>

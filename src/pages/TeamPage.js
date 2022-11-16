@@ -17,8 +17,11 @@ useEffect(() => {
           const data = await response.json();
           console.log('Check here for full data', data)
           setFantasyDataMain(data)
+
+          const removeExtraSpace = (s) => s.trim().split(/ +/).join(' ');
           const teams = data.teams.find( team =>
-            team.name === teamName)
+            
+            removeExtraSpace(team.name) === teamName)
             setTeam(teams)
             setIsLoading(false)
         } catch (error) {
