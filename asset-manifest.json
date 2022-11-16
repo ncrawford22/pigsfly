@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/pigsfly/static/css/main.b945a2eb.css",
-    "main.js": "/pigsfly/static/js/main.629ce907.js",
+    "main.js": "/pigsfly/static/js/main.cec758ac.js",
     "index.html": "/pigsfly/index.html",
     "main.b945a2eb.css.map": "/pigsfly/static/css/main.b945a2eb.css.map",
-    "main.629ce907.js.map": "/pigsfly/static/js/main.629ce907.js.map"
+    "main.cec758ac.js.map": "/pigsfly/static/js/main.cec758ac.js.map"
   },
   "entrypoints": [
     "static/css/main.b945a2eb.css",
-    "static/js/main.629ce907.js"
+    "static/js/main.cec758ac.js"
   ]
 }
