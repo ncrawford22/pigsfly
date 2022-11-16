@@ -1,4 +1,5 @@
 import axios from "axios";
+import baseURL from './baseURL';
 
 const getToken = () => {
     let token = localStorage.getItem("token");
@@ -7,7 +8,7 @@ const getToken = () => {
 }
 
 const axiosMessages = () => axios.create({
-    baseURL: 'http://localhost:8080/smackboard',
+    baseURL: baseURL + '/smackboard',
     headers: {
         'Authorization': `Bearer ${getToken()}`
     }
