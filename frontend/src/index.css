@@ -252,6 +252,19 @@ label {
     100% { transform: translate(0, 0) rotate(0deg) 
     }
   }
+
+.login-form, .registration-form {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    background-color: rgba(0,0,255,0.5);
+    width: 15%
+  }
+
 @media screen and (min-width: 300px) {
 
     .home {

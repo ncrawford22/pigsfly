@@ -39,32 +39,35 @@ function Login({ setOwner }) {
     }
 
     return ( 
-        <>
-            <h1>Login</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="email">Email:</label>
-                <br />
-                <input 
-                    type="text" 
-                    id="email"
-                    name="email"
-                    onChange={handleChange}
-                    value={form.email}
-                />
-                <br /><br />
-                <label htmlFor="password">Password:</label>
-                <br />
-                <input 
-                    type="password" 
-                    id="password"
-                    name="password"
-                    onChange={handleChange}
-                    value={form.password}
-                />
-                <br /><br />
-                <button>Login</button>
-            </form>
-        </>
+        <div>
+            <div className="login-form">
+                <h1>Login</h1>
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="email">Email:</label>
+                    <br />
+                    <input 
+                        type="text" 
+                        id="email"
+                        name="email"
+                        onChange={handleChange}
+                        value={form.email}
+                    />
+                    <br /><br />
+                    <label htmlFor="password">Password:</label>
+                    <br />
+                    <input 
+                        type="password" 
+                        id="password"
+                        name="password"
+                        onChange={handleChange}
+                        value={form.password}
+                    />
+                    <br /><br />
+                    <button>Login</button>
+                </form>
+            </div>
+
+        </div>
      );
 }
 

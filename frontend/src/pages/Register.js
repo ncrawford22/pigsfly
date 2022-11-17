@@ -38,7 +38,7 @@ function Register({ setOwner }) {
     }
 
     return ( 
-        <>
+        <div className="registration-form">
             <h1>Register</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="teamName">Team Name:</label>
@@ -73,7 +73,7 @@ function Register({ setOwner }) {
                 <br /><br />
                 <button>Register</button>
             </form>
-        </>
+        </div>
      );
 }
 
