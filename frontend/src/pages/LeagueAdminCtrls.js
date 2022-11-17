@@ -56,14 +56,15 @@ export default function LeagueAdminCtrls({ owner }) {
         <>
 
             <h1>League Admin Controls</h1>
+            <br /><br/>
             <div className="admin-delete">
                 <h3>Delete All Owners</h3>
                     <br />
                 <button onClick={handleSubmit}>Delete Owners</button>
             </div>
             <br />
-            <div className="getApi">
-                <h3>Get API Data</h3>
+            <div className="getApi" style={{position: 'absolute', top: '35%', right: '0', left: '0', marginLeft: 'auto', marginRight: 'auto', paddingBottom: '50px', backgroundColor: 'rgba(0,0,255,0.5)', width: '15%'}}>
+                <h3 style={{paddingTop: '15px'}}>Check API Data</h3>
                     <br />
                 <GetFantasyData />
             </div>

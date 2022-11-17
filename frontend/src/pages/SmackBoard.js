@@ -77,7 +77,6 @@ export default function SmackBoard( { owner }) {
         })
     }
     
-    console.log(messages)
     return (
         <div className="smackboard-main">
             <h1>Smack Board</h1>
@@ -86,9 +85,8 @@ export default function SmackBoard( { owner }) {
                     <Card.Body>
                         <ol style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '20px'}}>
                             {messages.map(m =>
-                            
-                                <div className="smboard-container">
-                                    <ul className="smboard-msg" key={m._id}>
+                                <div className="smboard-container" key={m._id}>
+                                    <ul className="smboard-msg">
                                         <div className="smack-message">
                                             {m.messages}
                                         </div>
@@ -99,6 +97,7 @@ export default function SmackBoard( { owner }) {
                                 </div>
                             )}
                         </ol>
+                        
                     </Card.Body>
             </Card>
             </Container>

@@ -31,7 +31,7 @@ export default function GetFantasyData() {
     }
 
     return (
-        <div>
+        <div className="fantasy-data-form">
             <form onSubmit={handleSubmit}>
                 <label htmlFor="leagueId">Enter League ID: </label>
                 <br />
