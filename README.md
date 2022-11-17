@@ -17,13 +17,18 @@ This application is for members of the Pigsfly Fantasy Football League that are 
 
 ## Sample Screenshots
 
-![Home](public/images/homepage.jpg)
+![Home](./frontend/public/images/home.JPG)
 
-![Login](public/images/details.jpg)
+![Login](./frontend/public/images/login.JPG)
 
-![Register](public/images/login.jpg)
+![Register](./frontend/public/images/register.JPG)
 
-![About](public/images/about.jpg)
+![Team](./frontend/public/images/team.JPG)
+
+![Smack Talk](./frontend/public/images/smacktalk.JPG)
+
+![Admin Ctrls](./frontend/public/images/adminctrl.JPG)
+
 
 
 ## Technologies 
