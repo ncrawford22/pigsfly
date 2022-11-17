@@ -7,16 +7,18 @@ export default function DisplayFantasyData({ team, fantasyDataMain, teamName, em
                     <img src={team.logo} alt="profile-logo" style={{width: "100px", height: "100px"}}></img>
                 </div>}
                 <br />
-            <p style={{fontWeight: 'bolder'}}>Team Name: <span style={{fontWeight: 'normal'}}>{teamName}</span></p>
-            <p>Email: {email}</p>
-            <div className="record">Record: {team.record.overall.wins}-{team.record.overall.losses}-{team.record.overall.ties}</div>
-            {team.record.overall.streakType === "WIN" && <div className="winStreak">Winning Streak: {team.record.overall.streakLength} Wins</div>}
-            {team.record.overall.streakType === "LOSS" && <div className="loseStreak">Losing Streak: {team.record.overall.streakLength} Losses</div>}
-            <div className="playoffSeed">Current Projected Playoff Seed: #{team.playoffSeed}</div>
+            <div className="team-info">
+                <div style={{fontWeight: 'bolder'}}>Team Name: <span style={{fontWeight: 'normal'}}>{teamName}</span></div>
+                <div>Email: <span style={{fontWeight: 'normal'}}>{email}</span></div>
+                <div className="record">Record: <span style={{fontWeight: 'normal'}}>{team.record.overall.wins}-{team.record.overall.losses}-{team.record.overall.ties}</span></div>
+                {team.record.overall.streakType === "WIN" && <div className="winStreak">Winning Streak: <span style={{fontWeight: 'normal'}}>{team.record.overall.streakLength} Wins</span></div>}
+                {team.record.overall.streakType === "LOSS" && <div className="loseStreak">Losing Streak: <span style={{fontWeight: 'normal'}}>{team.record.overall.streakLength} Losses</span></div>}
+                <div className="playoffSeed">Current Projected Playoff Seed: <span style={{fontWeight: 'normal'}}>#{team.playoffSeed}</span></div>
+            </div>   
             <br />
-            <div className="roster">
+            <div className="roster" style={{fontWeight: 'bolder',display: 'flex', justifyContent: 'center', backgroundColor: 'rgba(0,0,255,0.5)', backgroundSize: 'cover', width: '15%', boxShadow: '-5px -5px 25px 5px whitesmoke, 5px 5px 25px 5px blue'}}>
                 <h5 style={{textDecoration: 'underline'}}>Current Roster</h5>
-                {team.roster.entries.map((entry, i) => <div key={i} style={{backgroundColor: 'rgb(17, 17, 17)', width: '100vw'}}>{entry.playerPoolEntry.player.fullName}</div>)}
+                {team.roster.entries.map((entry, i) => <div key={i}>{entry.playerPoolEntry.player.fullName}</div>)}
             </div>
         </div> 
     )

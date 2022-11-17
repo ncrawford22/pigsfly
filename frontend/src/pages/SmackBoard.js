@@ -49,9 +49,7 @@ export default function SmackBoard( { owner }) {
         
     }
 
-    const deleteMessages = async (e) => {
-        e.preventDefault();
-
+    const deleteMessages = async () => {
         try {
             const response = await messageService.deleteMessages(messages)
             console.log(response)
@@ -81,7 +79,7 @@ export default function SmackBoard( { owner }) {
     
     console.log(messages)
     return (
-        <body className="smackboard-main">
+        <div className="smackboard-main">
             <h1>Smack Board</h1>
             <Container className="smackboard-container">
                 <Card style={{borderRadius: '45px', boxShadow: '4px 4px 4px 2px grey'}}>
@@ -118,6 +116,6 @@ export default function SmackBoard( { owner }) {
                 {owner === "Let Me See Your TDs" && <Button variant="secondary" onClick={handleDeleteMessages}>Delete Messages</Button>}
                 </div>
                 <br />
-        </body>
+        </div>
     )
 }

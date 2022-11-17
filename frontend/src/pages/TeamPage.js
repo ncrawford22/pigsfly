@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import DisplayFantasyData from "../components/DisplayFantasyData";
 import EditTeamInfo from "../components/EditTeamInfo";
 
-function TeamPage({ teamName, email }) {
+function TeamPage({ teamName, email, setOwner }) {
     
     let [fantasyDataMain, setFantasyDataMain] = useState([]);
     let [team, setTeam] = useState({});
@@ -35,10 +35,10 @@ useEffect(() => {
 
 console.log(team)
     return ( 
-        <div className="team-page">
+        <div className="team-page" style={{overflow: 'hidden'}}>
             {isLoading && <h1>Loading Fantasy data....</h1>}
             {!isLoading && <DisplayFantasyData team={team} teamName={teamName} isLoading={isLoading} fantasyDataMain={fantasyDataMain} email={email} />}
-            {!isLoading && <EditTeamInfo email={email} isLoading={isLoading} />}
+            {!isLoading && <EditTeamInfo email={email} isLoading={isLoading} setOwner={setOwner} />}
         </div>
         
      );

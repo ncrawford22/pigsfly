@@ -1,14 +1,64 @@
-.App {
-    background-color: rgb(17, 17, 17);
+html {
+    background: url('../public/fballbackground.jpg') no-repeat center center fixed;
+    background-size: cover;  
+}
+
+
+.App {  
     color: rgb(212, 212, 212);
+}
+
+body {
+    background: url('../public/fballbackground.jpg') no-repeat center center fixed;
+    background-size: cover;  
+    background-color: rgb(17, 17, 17);
     height: 100vh;
     width: 100vw;
 }
 
-body {
-    background-color: rgb(17, 17, 17);
-    height: 100vh;
-    width: 100vw;
+button {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 26px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 35px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+button:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
 }
 
 ul {
@@ -35,9 +85,16 @@ form {
 }
 
 h1 {
+    padding-top: 25px;
     text-align: center;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     text-shadow: 1px 3px 2px lightgray;
+}
+
+label {
+    color: white;
+    font-weight: bolder;
+    text-shadow: 5px 3px 6px darkblue;
 }
 
 .delete-btn {
@@ -66,15 +123,11 @@ h1 {
     font-size: medium;
 }
 
-.home-h1 {
-    margin-bottom: 5px;
-}
 
 .home-h2 {
     font-style: italic;
     font-weight: lighter;
     font-size: large;
-    /* background-color: whitesmoke; */
     color: white;
     display: flex;
     justify-content: center;
@@ -82,20 +135,19 @@ h1 {
     clip-path: polygon(0 8px, 100% 0, calc(100% - 8px) 100%, 8px calc(100% - 8px));
     line-height: 1.2em;
     padding: 15px;
-    animation: rotateText 30s linear infinite alternate-reverse;
+    animation: rotateText 40s linear infinite alternate-reverse;
 }
 @keyframes rotateText {
     from {
-        transform: perspective(1000px) rotateY(360deg);
+        transform: ease-in rotate(0deg);
     }
     to {
-        transform: perspective(1000px) ease-in rotateY(360deg);
+        transform: rotateY(360deg);
     }
 }
 
 .home-h2-border {
-    border-style: dotted;
-    border-color: grey;
+    background-color: rgba(0,0,255,0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,6 +159,7 @@ h1 {
     animation: border-rotate 4s cubic-bezier(.51, -.4, .56, .99);
     animation-iteration-count: infinite;
     animation-delay: 1s;
+    box-shadow: 0 0 12px 9px blue;
 }
 @keyframes border-rotate {
     40% {
@@ -153,22 +206,52 @@ h1 {
     text-align: right;
 }
 
-.team-page {
-    background-color: rgb(17, 17, 17);
-    height: 100vh;
-    width: 100vw;
-    min-width: 800px;
-}
 
 .edit-form {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    position: relative;
-    bottom: 71%;
-    right: 1%;
+    padding-top: 20px;
+    padding-left: 50px;
+
 }
 
+.roster {
+    display: flex;
+    justify-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-info {
+    font-weight: bolder;
+    color: white;
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    background-color: rgba(0,0,255,0.5);
+    box-Shadow: -5px -5px 25px 5px whitesmoke, 5px 5px 25px 5px blue;
+    margin-right: 50px;
+}
+
+.profile-logo {
+    filter: drop-shadow(1px 2px 0.5px lightgray);
+    backface-visibility: visible !important;
+    animation: logoShake 1s ease-in infinite;
+    transform: translate3d(0, 0, 0);
+}
+@keyframes logoShake {
+    0% { transform: translate(0, 0) rotate(0deg)
+    }
+    25% { transform: translate(5px, 5px) rotate(5deg) 
+    }
+    50% { transform: translate(0, 0) rotate(0eg) 
+    }
+    75% { transform: translate(-5px, 5px) rotate(-5deg) 
+    }
+    100% { transform: translate(0, 0) rotate(0deg) 
+    }
+  }
 @media screen and (min-width: 300px) {
 
     .home {
@@ -189,8 +272,6 @@ h1 {
 
 
     .smackboard-main {
-        background-color: rgb(17, 17, 17);
-        background-size: cover;
         color: white;
         height: auto;
         width: auto;

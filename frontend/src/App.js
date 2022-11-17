@@ -70,7 +70,8 @@ function App() {
                         element={
                             <TeamPage 
                                 teamName={owner.teamName} 
-                                email={owner.email} 
+                                email={owner.email}
+                                setOwner={setOwner} 
                             />
                         } 
                     /> 

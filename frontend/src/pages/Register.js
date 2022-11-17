@@ -71,7 +71,7 @@ function Register({ setOwner }) {
                     value={form.password}
                 />
                 <br /><br />
-                <button>Submit</button>
+                <button>Register</button>
             </form>
         </>
      );

@@ -24,10 +24,15 @@ const deleteOwners = (owners) => {
     return axiosOwner().delete('/clear', owners)
 }
 
+const updateOwnerEmail = (newEmail) => {
+    return axiosOwner().put('/update', newEmail)
+}
+
 
 const services = {
     info,
-    deleteOwners
+    deleteOwners,
+    updateOwnerEmail
 }
 
 export default services

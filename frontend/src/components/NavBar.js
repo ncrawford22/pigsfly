@@ -11,7 +11,7 @@ function NavBar({ owner, setOwner }) {
     if (owner) {
         if (owner === "Let Me See Your TDs") {
             return (
-                <Navbar bg="dark" expand="sm">
+                <Navbar style={{backgroundColor: 'rgba(0, 0, 255, 0.123)', boxShadow: '0 1px 3px blue'}} expand="sm">
                     <Container>
                         <Navbar.Brand href="/">
                             <img src="./favicon.ico" alt="React Icon" id="icon"/>
@@ -29,7 +29,7 @@ function NavBar({ owner, setOwner }) {
             
         } else if (owner !== "Let Me See Your TDs") {
             return (
-                <Navbar bg="dark" expand="sm">
+                <Navbar style={{backgroundColor: 'rgba(0, 0, 255, 0.123)', boxShadow: '0 1px 3px blue'}} expand="sm">
                     <Container>
                         <Navbar.Brand href="/">
                             <img src="./favicon.ico" alt="React Icon" id="icon"/>
@@ -47,7 +47,7 @@ function NavBar({ owner, setOwner }) {
 
     } else {
         return (
-            <Navbar bg="dark" expand="sm">
+            <Navbar style={{backgroundColor: 'rgba(0, 0, 255, 0.123)', boxShadow: '0 1px 3px blue'}} expand="sm">
                 <Container>
                     <Navbar.Brand href="/">
                         <img src="./favicon.ico" alt="React Icon" id="icon"/>

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import authService from "../services/authService";
 import ownerService from "../services/ownerService";
 
+
 function Login({ setOwner }) {
 
     const navigate = useNavigate()
@@ -61,7 +62,7 @@ function Login({ setOwner }) {
                     value={form.password}
                 />
                 <br /><br />
-                <button>Submit</button>
+                <button>Login</button>
             </form>
         </>
      );
