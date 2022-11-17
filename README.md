@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# PigsflyFF
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+PigsflyFF is a fantasy football league application built for a "highly competitive" fantasy football league. League members can signup and login to view their fantasy football team and even talk to "trash" to one another.
 
-### `npm start`
+This application Fullstack application built using the MERN stack.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The API used in this project is no longer public and may have to be updated in the near future.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This application is for members of the Pigsfly Fantasy Football League that are interested in quickly checking their rosters and chatting with other league members.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Sample Screenshots
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Home](public/images/homepage.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Login](public/images/details.jpg)
 
-### `npm run eject`
+![Register](public/images/login.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![About](public/images/about.jpg)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technologies 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+JavaScript, MongoDB Atlas, Express, ReactJS, NodeJS, React-Bootstrap, MongoDB Atlas, Axios, Mongoose, jsonwebtoken, bcrypt, CSS
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technical Challenges
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Working on some of the CRUD operations 
+    - Could not decide what I wanted to actually update
+- API issues
+    - The API that I used is extremely complex. It is also no longer public, so there is not up to date documentation.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Future Implementations
 
-### Analyzing the Bundle Size
+- Add and/or improve CRUD operations.
+- Implement payment options for league members to pay annual dues
+- Frontend updates 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Credits
 
-### Advanced Configuration
+- Although they were doing their work with Python, I must give credit to these two:
+    - Tim Bryan | View His YouTube Channel [YouTube](https://youtu.be/S_ax0rjAoXE) |
+    - Learn With Jabe | View His YouTube Channel [YouTube](https://youtu.be/3KtgCsTg97E) |
+- Background Image Credit: © Adobe Stock
+- ESPN
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- This React app is deployed through Netlify and cyclic. You can view the live site through this URL: https://pigsflyff.netlify.app
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT]
+(https://choosealicense.com/licenses/mit/)
