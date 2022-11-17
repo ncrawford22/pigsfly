@@ -25,7 +25,7 @@ const deleteOwners = (owners) => {
 }
 
 const updateOwnerEmail = (newEmail) => {
-    return axiosOwner().put('/update', newEmail)
+    return axiosOwner().put('/info', newEmail)
 }
 
 

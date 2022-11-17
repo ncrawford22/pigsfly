@@ -33,7 +33,7 @@ This application is for members of the Pigsfly Fantasy Football League that are 
 
 ## Technologies 
 
-JavaScript, MongoDB Atlas, Express, ReactJS, NodeJS, React-Bootstrap, MongoDB Atlas, Axios, Mongoose, jsonwebtoken, bcrypt, CSS
+JavaScript, MongoDB Atlas, Express, ReactJS, NodeJS, React-Bootstrap, Axios, Mongoose, jsonwebtoken, bcrypt, CSS
 
 
 ## Technical Challenges

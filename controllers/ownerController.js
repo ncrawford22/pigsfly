@@ -33,21 +33,17 @@ const clear = async (req, res) => {
 }
 
 const updateOwnerEmail = async (req, res) => {
-    try {
-        let foundOwner = await Owner.findById(req.params.id, req.body)
-        if (!foundOwner) {
-            return res.state(404).send("No info found!")
-        }
-        console.log(req.body.email)
-        foundOwner = await Owner.findByIdAndUpdate(
-            req.params.id,
-            {$set: req.body.email}
-        )
-        res.status(200).json({ email: foundOwner.email})
-    } catch (error) {
-        res.status(400).json({error: error.message})
-    }
-}
+  try {
+    const foundOwner = await Owner.findOne({email: Owner.email})
+    foundOwner.email.push({
+        email: req.body
+    })
+    res.status(200).json({msg: 'Updated email!'})
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
 
 module.exports = {
     specificOwner,

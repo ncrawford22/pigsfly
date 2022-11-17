@@ -15,7 +15,9 @@ export default function EditTeamInfo({ email, isLoading, setOwner }) {
     // console.log('this is the email', currentEmail)
 
     const handleChange = (e) => {
-        setCurrentEmail(e.target.value)
+
+        setNewEmail(e.target.value)
+        setCurrentEmail(newEmail)
     }
     // const updateCurrentEmail = () => {
     //     let newEmail = {email}
@@ -24,7 +26,7 @@ export default function EditTeamInfo({ email, isLoading, setOwner }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        setNewEmail(currentEmail)
+        setCurrentEmail(newEmail)
         console.log('this is the new email', newEmail)
 
         try {
