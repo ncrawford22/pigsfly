@@ -48,7 +48,8 @@ JavaScript, MongoDB Atlas, Express, ReactJS, NodeJS, React-Bootstrap, MongoDB At
 
 - Add and/or improve CRUD operations.
 - Implement payment options for league members to pay annual dues
-- Frontend updates 
+- Frontend updates
+    - Make more mobile responsive  
 
 
 
